@@ -1,7 +1,7 @@
-namespace DigitsRecogniszer
+﻿namespace DigitsRecogniszer
 {
-    public interface IDistance<T>
+    public interface IDistance
     {
-        double Between(T[] pixels1, T[] pixels2);
+        double Between(int[] pixels1, int[] pixels2);
     }
 }

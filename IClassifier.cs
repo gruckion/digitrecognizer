@@ -1,10 +1,10 @@
-namespace DigitsRecogniszer
+﻿namespace DigitsRecogniszer
 {
-    using System.Collections;
     using System.Collections.Generic;
-    public interface IClassifier<T>
+
+    public interface IClassifier
     {
-        void Train(IEnumerable<Observation<T>> trainingSet);
-        string Predict(T[] pixels);
+        void Train(IEnumerable<Observation> trainingSet);
+        string Predict(int[] pixels);
     }
 }

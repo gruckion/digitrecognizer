@@ -1,9 +1,8 @@
-namespace DigitsRecogniszer
+﻿namespace DigitsRecogniszer
 {
     using System;
-    using System.Threading.Tasks;
 
-    public class ManhattanDistance : IDistance<int>
+    public class ManhattanDistance : IDistance
     {
         public double Between(int[] pixels1, int[] pixels2)
         {
@@ -15,7 +14,13 @@ namespace DigitsRecogniszer
             var length = pixels1.Length;
             var distance = 0;
 
-            Parallel.For(0, distance, i => { Math.Abs(pixels1[i] -= pixels2[i]); });
+            // Not working as expected
+            //Parallel.For(0, length, i => { distance += Math.Abs(pixels1[i] -= pixels2[i]); });
+            
+            for (int i = 0; i < length; i++)
+            {
+                distance += Math.Abs(pixels1[i] - pixels2[i]);
+            }
 
             return distance;
         }
