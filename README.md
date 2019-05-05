@@ -1,4 +1,4 @@
-#Digit Recognizer
+### Digit Recognizer
 Basic digit OCR using Manhatten distance algorithm
 
 https://en.wikipedia.org/wiki/Taxicab_geometry
